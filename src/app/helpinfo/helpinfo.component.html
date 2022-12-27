@@ -1,0 +1,16 @@
+<div class="centered-text mt-4">
+    <h1>Merhaba Nasıl Yardımcı Olabiliriz?</h1>
+    <form (submit)="preventSubmit($event)">
+        <div class="search-container mt-4">
+            <input type="text" [(ngModel)]="searchTerm" name="searchTerm" placeholder="Arama yapın...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+    </form>
+    <h2>Sıkça Sorulan Sorular</h2>
+    <ul>
+        <li *ngFor="let question of questions; let i = index"><a href=" " (click)="toggleAnswer(i)">{{ question }}</a></li>
+      </ul>
+      <div *ngFor="let answer of answers; let i = index" class="answer">
+        {{ answer }}
+      </div>
+</div>

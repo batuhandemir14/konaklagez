@@ -1,0 +1,19 @@
+<div class="row mt-4">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <h4 class="text-center mb-3"><a class="text-decoration-none text-dark">Merhaba user, profilinize gidin</a></h4>
+      <div class="row mb-3 shadow-sm mt-4" *ngFor="let box of boxes">
+        <div class="col-4 " *ngFor="let item of box">
+          <div class="card text-center h-100 mt-4">
+            <div class="card-header">
+                <i class="fa {{ item.icon }}"></i> {{ item.title }}
+              </div>
+              <div class="card-body mt-4">
+                {{ item.content }}
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3"></div>
+  </div>
